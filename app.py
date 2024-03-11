@@ -1,4 +1,5 @@
 import os
+import time # need this for error messages to stay in terminal longer
 
 # Global variables declaration
 tools = [
@@ -73,6 +74,7 @@ while True:
             bank_account -= 500
         else:
             print("** But you don't have enough money to upgrade **")
+            time.sleep(2)   # adding delay for the error message to stay in terminal
     else:
         clear_console()
         print("Invalid choice. Please choose 0, 1, or 2.")
